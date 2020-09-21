@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <!-- Django-bootstrap4をロード -->
+    {% load bootstrap4 %}
+    <!-- CSSを読み込み -->
+    {% bootstrap_css %}
+    <link rel = "stylesheet" type="text/css" href="{% static 'carbike/css/style.css' %}">
+    <!-- JS読み込み -->
+    {% bootstrap_javascript jquery='full' %}
+    <title>CAR or MORTERBIKE Judgment | {% block title %}{% endblock %}</title>
+</head>
+<body>
+    <nav class = "navbar navbar-expand-1g navbar-light bg-light">
+        <a class = "navbar-brand" href = "#">
+            画像判定AIアプリ
+        </a>
+    </nav>
+    <!-- Bootstrapのメインコンテンツ領域 -->
+    <div class = "container">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>
